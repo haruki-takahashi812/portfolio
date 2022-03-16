@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--color-orange: #f44336;
+			--color-main: var(--color-orange);
+			--color-grey: #1d1d1d;
+		}
+
+		body {
+			font-family: "arial";
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: black;
+		}
+
+		/* #region ||| card */
+
+		.card {
+			display: grid;
+			grid-template-columns: 300px;
+			grid-template-rows: 210px 60px 170px 50px;
+			grid-template-areas: "image""tags""text""stats";
+			background: var(--color-grey);
+			color: white;
+			border-radius: 18px;
+			text-align: center;
+			transform-style: preserve-3d;
+			perspective: 1000px;
+		}
+
+		.card-image {
+			grid-area: image;
+			border-radius: 15px 15px 0 0;
+			background-size: cover;
+			background-image: linear-gradient(transparent 0%,
+					transparent 70%,
+					var(--color-grey) 100%),
+				url("https://www.teahub.io/photos/full/31-314018_autumn-mountain-wallpaper-hd.jpg");
+		}
+
+		/* #region |||| card-tags */
+
+		.tags {
+			margin-top: 10px;
+			grid-area: tags;
+			transform: translateZ(22px);
+		}
+
+		.tags span {
+			border-radius: 50px;
+			padding: 3px 8px;
+			background: var(--color-main);
+			font-size: 12px;
+			margin: 3px;
+			display: inline-block;
+			color: black;
+		}
+
+		.tags .tag-html {
+			background: #e96128;
+		}
+
+		.tags .tag-css {
+			background: dodgerblue;
+		}
+
+		.tags .tag-js {
+			background: #edd84e;
+		}
+
+		.tags .tag-react {
+			background: #5fd7f8;
+		}
+
+		.tags .tag-mysql {
+			background: #5895c4;
+		}
+
+		.tags .tag-node {
+			background: #8ac54a;
+		}
+
+		.tags .tag-sass {
+			background: #d26da2;
+		}
+
+		.tags .tag-mongo {
+			background: #80c481;
+		}
+
+		.tags .tag-ts {
+			background: #007acc;
+		}
+
+		.tags .tag-redux {
+			background: #9962f0;
+		}
+
+		.tags .tag-angular {
+			background: #f03a3e;
+		}
+
+		.tags .tag-next {
+			background: #70d3ce;
+		}
+
+		/* #endregion */
+
+		.card-text {
+			grid-area: text;
+			margin: 10px 15px 0 15px;
+			transform: translateZ(30px);
+		}
+
+		.card-text h3 {
+			font-size: 28px;
+			margin-bottom: 10px;
+		}
+
+		.card-text p {
+			color: lightgrey;
+			font-size: 15px;
+			font-weight: 300;
+		}
+
+		/* #region |||| card-footer */
+
+		.card-footer {
+			grid-area: stats;
+			border-radius: 0 0 15px 15px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			background: var(--color-main);
+			cursor: pointer;
+			color: black;
+			z-index: 999;
+		}
+
+		.card-footer div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.card-footer div:hover {
+			text-decoration: underline;
+		}
+
+		.card-footer div:first-child {
+			border-right: 1px solid darkslategray;
+			border-radius: 0 0 0 15px;
+		}
+
+		.card-footer div:nth-child(2) {
+			border-radius: 0 0 15px 0;
+		}
+
+		.card-footer div:first-child::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(100deg, transparent, white, transparent);
+			/* transition: left 500ms; */
+		}
+
+		.card-footer div:nth-child(2)::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(80deg, transparent, white, transparent);
+			/* transition: left 500ms; */
+		}
+
+		.card-footer div:first-child:hover::before {
+			left: 100%;
+			transition: left 500ms;
+		}
+
+		.card-footer div:nth-child(2):hover::before {
+			left: -100%;
+			transition: left 500ms;
+		}
+
+		/* #endregion */
+
+		/* from vanilla-tilt library */
+		.js-tilt-glare {
+			border-radius: 18px;
+		}
+
+		/* #region |||| card-glow */
+
+		.glow::after {
+			content: "";
+			background: linear-gradient(45deg,
+					var(--color-main) 0%,
+					cyan 25%,
+					var(--color-main) 50%,
+					cyan 75%,
+					var(--color-main) 100%) repeat 0% 0% / 300% 100%;
+			position: absolute;
+			inset: -1px;
+			filter: blur(8px);
+			/* or z-index */
+			transform: translateZ(-1px);
+			animation: glow 6s linear infinite;
+		}
+
+		@keyframes glow {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+
+		/* #endregion */
+		/* #endregion */
+	</style>
+</head>
+
+<body>
+	<div class="card glow">
+		<div class="card-image"></div>
+		<div class="tags">
+			<span class="tag-html">HTML</span>
+			<span class="tag-css">CSS</span>
+			<span class="tag-js">JavaScript</span>
+			<span class="tag-js">Three.js</span>
+			<span class="tag-react">React</span>
+			<span class="tag-react">MUI</span>
+			<span class="tag-js">Chart.js</span>
+			<span class="tag-mysql">MySQL</span>
+			<!-- 		<span class="tag-node">Node.js</span>
+			<span class="tag-js">jQuery</span>
+			<span class="tag-sass">SASS</span>
+			<span class="tag-react">framer-motion</span>
+			<span class="tag-mongo">MongoDB</span>
+			<span class="tag-ts">TypeScript</span>
+			<span class="tag-redux">Redux</span>
+			<span class="tag-angular">Angular</span>
+			<span class="tag-next">Next.js</span> -->
+		</div>
+		<div class="card-text">
+			<h3>Post One</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa vitae, ducimus tenetur fugiat sint quia
+				delectus porro dicta facilis, architecto sint porro tenetur blanditiis.</p>
+		</div>
+		<div class="card-footer">
+			<div>View Code</div>
+			<div>View Project</div>
+		</div>
+	</div>
+
+	<script src="vanilla-tilt.min.js"></script>
+	<script>
+		VanillaTilt.init(document.querySelector(".card"), {
+			glare: true,
+			// reverse: true,
+			"max-glare": 0.1,
+			speed: 1000,
+		})
+
+	</script>
+</body>
+
+</html>
