@@ -8,15 +8,6 @@
 	margin: 0;
 }
 
-:root {
-	--color-orange: #f44336;
-	/*
-	--color-cyan: #badaec;
-	--color-cyan2: #a8e6eb; */
-	--color-main: var(--color-orange);
-	--color-grey: #1d1d1d;
-}
-
 html {
 	background-color: black;
 	scroll-behavior: smooth;
