@@ -66,36 +66,6 @@ canvas {
 	/* Negative half of width. */
 }
 
-.bg-backup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 100vh;
-	width: 100vw;
-	background-image: url(./img/blackspace-backup.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: -1000;
-}
-
-.scroll-arrow {
-	height: 30px;
-	width: 30px;
-	position: fixed;
-	right: 60px;
-	bottom: 60px;
-	opacity: 0;
-	transition: opacity 400ms, transform 300ms, z-index 400ms;
-	z-index: -1000;
-	cursor: pointer;
-	border: solid var(--color-main);
-	border-width: 0 10px 10px 0;
-	transform: rotate(-135deg);
-}
-
 .scroll-arrow:hover {
 	transform: scale(1.1, 1.1) rotate(-135deg);
 }
