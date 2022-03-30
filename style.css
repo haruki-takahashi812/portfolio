@@ -429,37 +429,6 @@ hr {
 /* #endregion */
 /* #region || projects section */
 
-#projects {
-	margin: 0;
-	/* padding: 90px 220px; */
-}
-
-#projects .section-title {
-	margin-top: 150px;
-	margin-left: 220px;
-}
-
-@media (max-width: 880px) {
-	/* center title */
-	#projects .section-title {
-		width: 310px;
-		margin: auto;
-		margin-top: 70px;
-	}
-}
-
-@media (max-width: 500px) {
-	#projects .section-title h1 {
-		font-size: 50px;
-	}
-}
-
-@media (max-width: 400px) {
-	#projects .section-title h1 {
-		font-size: 45px;
-	}
-}
-
 .splide {
 	height: 615px;
 	overflow: hidden;
