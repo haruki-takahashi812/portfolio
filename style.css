@@ -27,14 +27,8 @@ html {
 	color: white;
 }
 
-@font-face {
-	font-family: title-font;
-	src: url(img/GroteskBold.ttf);
-}
-
 body {
 	font-family: "roboto", sans-serif;
-	/* font-family: title-font; */
 	/* to  fix collapsing margins */
 	display: flex;
 	flex-direction: column;
