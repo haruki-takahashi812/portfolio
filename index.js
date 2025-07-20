@@ -113,7 +113,7 @@ const homeTitle = document.querySelector(".home-title")
 const homeDownloadResumeBtn = document.querySelector(".download-resume-btn")
 
 setTimeout(() => {
-	createTitle("Hi,\nI'm Tamir,\nFull Stack Developer", homeTitle)
+	createTitle("Hi,\nI'm Haruki Takahashi,\nFull Stack Developer", homeTitle)
 	setTimeout(() => {
 		homeDownloadResumeBtn.classList.add("observer-animation")
 	}, 1000);
