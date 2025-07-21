@@ -8,11 +8,8 @@
 }
 
 :root {
-	--color-orange: #f44336;
-	/*
-	--color-cyan: #badaec;
-	--color-cyan2: #a8e6eb; */
-	--color-main: var(--color-orange);
+	--color-orange: #2196f3; /* Rasengan blue */
+	--color-main: #21d4fd; /* Rasengan cyan/blue */
 	--color-grey: #1d1d1d;
 }
 
@@ -279,7 +276,8 @@ h1:hover {
 }
 
 .download-resume-btn:hover {
-	color: black;
+	color: white;
+	background: linear-gradient(90deg, #21d4fd 0%, #2196f3 100%);
 }
 
 /* hover effect */
@@ -601,52 +599,42 @@ hr {
 	color: black;
 }
 
+/* Tag colors */
 .tags .tag-html {
-	background: #e96128;
+	background: #21d4fd;
 }
-
 .tags .tag-css {
-	background: dodgerblue;
+	background: #2196f3;
 }
-
 .tags .tag-js {
-	background: #edd84e;
+	background: #b3e0ff;
 }
-
 .tags .tag-react {
 	background: #5fd7f8;
 }
-
 .tags .tag-mysql {
-	background: #5895c4;
+	background: #21d4fd;
 }
-
 .tags .tag-node {
-	background: #8ac54a;
+	background: #2196f3;
 }
-
 .tags .tag-sass {
-	background: #d26da2;
+	background: #21d4fd;
 }
-
 .tags .tag-mongo {
-	background: #80c481;
+	background: #5fd7f8;
 }
-
 .tags .tag-ts {
-	background: #007acc;
+	background: #21d4fd;
 }
-
 .tags .tag-redux {
-	background: #9962f0;
+	background: #2196f3;
 }
-
 .tags .tag-angular {
-	background: #f03a3e;
+	background: #21d4fd;
 }
-
 .tags .tag-next {
-	background: #70d3ce;
+	background: #5fd7f8;
 }
 
 /* #endregion */
@@ -821,7 +809,8 @@ form button {
 }
 
 form button:hover {
-	color: black;
+	color: white;
+	background: linear-gradient(90deg, #21d4fd 0%, #2196f3 100%);
 }
 
 /* hover effect */
